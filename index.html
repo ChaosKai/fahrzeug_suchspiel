@@ -3,11 +3,24 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
+        <link rel="stylesheet" type="text/css" href="style/images.css">
         <link rel="stylesheet" type="text/css" href="style/teams.css">
         <link rel="stylesheet" type="text/css" href="style/members.css">
     </head>
     <body>
 
+
+        <div id="background">
+            <div class="main">
+
+            </div>
+            <div class="team1">
+
+            </div>
+            <div class="team2">
+
+            </div>
+        </div>
 
         <div id="countdown">
             00:00
@@ -73,10 +86,20 @@
                                 if( $("#tools").attr("data-team") == 1 )
                                 {
                                     team_1.ctool = $(this).attr("data-tool");
+                                    $("#background .team1").show().css("background", `url("img/${ tools[team_1.ctool].image }")`);
+                                    setTimeout(function()
+                                    {
+                                        $("#background .team1").fadeOut()
+                                    }, 2000);
                                 }
                                 if( $("#tools").attr("data-team") == 2 )
                                 {
                                     team_2.ctool = $(this).attr("data-tool");
+                                    $("#background .team2").show().css("background", `url("img/${ tools[team_2.ctool].image }")`);
+                                    setTimeout(function()
+                                    {
+                                        $("#background .team2").fadeOut()
+                                    }, 2000);
                                 }
 
                                 $("#tools").fadeOut();
@@ -193,8 +216,10 @@
                     function startRound()
                     {
                         countdown = 120;
+                        CountDown();
 
-                        CountDown()
+                        $("#background .team1").fadeIn();
+                        $("#background .team2").fadeIn();
                     }
 
                     function CountDown()

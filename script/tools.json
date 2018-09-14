@@ -4,8 +4,16 @@
         "image" : "s-tlg-steckleiter.jpg"
     },
     {
+        "name" : "Atemluftflasche 300bar",
+        "image" : "atemschutzflasche.jpg"
+    },
+    {
         "name" : "Atemschutzmaske",
         "image" : "atemschutzmaske.jpg"
+    },
+    {
+        "name" : "Atemschutznotfalltasche",
+        "image" : "atemschutznotfalltasche.jpg"
     },
     {
         "name" : "Atemschutzüberwachung",
@@ -16,12 +24,20 @@
         "image" : "aufnahmebruecke.jpg"
     },
     {
+        "name" : "Ansaugschlauch D (für Zumischer)",
+        "image" : "ansaugschlauch-d.jpg"
+    },
+    {
         "name" : "Blitzleuchte / Verkehrswarnleuchte",
         "image" : "blitzleuchte.jpg"
     },
     {
         "name" : "Steckleiter Verbindungsteil",
         "image" : "bockleiterteil.jpg"
+    },
+    {
+        "name" : "Schleifkorbtrage",
+        "image" : "schleifkorbtrage.jpg"
     },
     {
         "name" : "Chemikalienschutzanzug",
@@ -50,6 +66,10 @@
     {
         "name" : "Feuerpatsche",
         "image" : "feuerpatsche.jpg"
+    },
+    {
+        "name" : "Fluchthaube",
+        "image" : "fluchthaube.jpg"
     },
     {
         "name" : "Feuerwehraxt",
@@ -88,6 +108,10 @@
         "image" : "handscheinwerfer.jpg"
     },
     {
+        "name" : "Handwerkzeugkoffer",
+        "image" : "handwerkzeug.jpg"
+    },
+    {
         "name" : "Hohlstrahlrohr",
         "image" : "hohlstrahlrohr.jpg"
     },
@@ -114,6 +138,10 @@
     {
         "name" : "Saugschlauch A (110mm | 1,6m)",
         "image" : "saugschlauch-a.jpg"
+    },
+    {
+        "name" : "Schaummittelkanister",
+        "image" : "schaummittelkanister.jpg"
     },
     {
         "name" : "Scheinwerfer / Flutlichtstrahler",
