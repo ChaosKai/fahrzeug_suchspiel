@@ -86,7 +86,12 @@
                                 if( $("#tools").attr("data-team") == 1 )
                                 {
                                     team_1.ctool = $(this).attr("data-tool");
-                                    $("#background .team1").show().css("background", `url("img/${ tools[team_1.ctool].image }")`);
+                                    $("#background .team1").show().css({
+                                        "background"            : `url("img/${ tools[team_1.ctool].image }")`,
+                                        "background-size"       : "80%",
+                                        "background-position"   : "center",
+                                        "background-repeat"     : "no-repeat"
+                                    });
                                     setTimeout(function()
                                     {
                                         $("#background .team1").fadeOut()
@@ -95,7 +100,12 @@
                                 if( $("#tools").attr("data-team") == 2 )
                                 {
                                     team_2.ctool = $(this).attr("data-tool");
-                                    $("#background .team2").show().css("background", `url("img/${ tools[team_2.ctool].image }")`);
+                                    $("#background .team2").show().css({
+                                        "background"            : `url("img/${ tools[team_2.ctool].image }")`,
+                                        "background-size"       : "80%",
+                                        "background-position"   : "center",
+                                        "background-repeat"     : "no-repeat"
+                                    });
                                     setTimeout(function()
                                     {
                                         $("#background .team2").fadeOut()
@@ -115,6 +125,21 @@
 
                     $(document).ready(function()
                     {
+                        if( localStorage.getItem("team1") != null )
+                        {
+                            team_1 = JSON.parse(localStorage.getItem("team1"));
+                        }
+                        if( localStorage.getItem("team2") != null )
+                        {
+                            team_2 = JSON.parse(localStorage.getItem("team2"));
+                        }
+
+                        setInterval(function()
+                        {
+                            localStorage.setItem("team1", JSON.stringify(team_1));
+                            localStorage.setItem("team2", JSON.stringify(team_2));
+                        }, 5000);
+
                         $("#members").hide();
 
                         $("#countdown").on("click", function()
