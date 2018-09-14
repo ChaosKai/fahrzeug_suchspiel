@@ -115,6 +115,21 @@
 
                     $(document).ready(function()
                     {
+                        if( localStorage.getItem("team1") != null )
+                        {
+                            team_1 = JSON.parse(localStorage.getItem("team1"));
+                        }
+                        if( localStorage.getItem("team2") != null )
+                        {
+                            team_2 = JSON.parse(localStorage.getItem("team2"));
+                        }
+
+                        setInterval(function()
+                        {
+                            localStorage.setItem("team1", JSON.stringify(team_1));
+                            localStorage.setItem("team2", JSON.stringify(team_2));
+                        }, 5000);
+
                         $("#members").hide();
 
                         $("#countdown").on("click", function()
