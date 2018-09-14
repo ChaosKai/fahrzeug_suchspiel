@@ -19,14 +19,14 @@
             top                     : 0px;
             left                    : 0px;
 
-            background              : url("img/background_1.jpg");
+            background              : url("../img/background_1.jpg");
             background-size         : cover;
             background-position     : center;
         }
 
         #background > .team1
         {
-            width                   : 100%;
+            width                   : 50%;
             height                  : 100%;
 
             position                : absolute;
@@ -35,7 +35,8 @@
 
             /* background              : url("img/background_1.jpg"); */
             background-size         : cover;
-            background-position     : center;
+            background-position     : center center;
+            background-repeat       : no-repeat;
         }
 
         #background > .team2
@@ -49,5 +50,6 @@
 
             /* background              : url("img/background_1.jpg"); */
             background-size         : cover;
-            background-position     : center;
+            background-position     : center center;
+            background-repeat       : no-repeat;
         }
