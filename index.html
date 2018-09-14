@@ -86,7 +86,12 @@
                                 if( $("#tools").attr("data-team") == 1 )
                                 {
                                     team_1.ctool = $(this).attr("data-tool");
-                                    $("#background .team1").show().css("background", `url("img/${ tools[team_1.ctool].image }")`);
+                                    $("#background .team1").show().css({
+                                        "background"            : `url("img/${ tools[team_1.ctool].image }")`,
+                                        "background-size"       : "80%",
+                                        "background-position"   : "center",
+                                        "background-repeat"     : "no-repeat"
+                                    });
                                     setTimeout(function()
                                     {
                                         $("#background .team1").fadeOut()
@@ -95,7 +100,12 @@
                                 if( $("#tools").attr("data-team") == 2 )
                                 {
                                     team_2.ctool = $(this).attr("data-tool");
-                                    $("#background .team2").show().css("background", `url("img/${ tools[team_2.ctool].image }")`);
+                                    $("#background .team2").show().css({
+                                        "background"            : `url("img/${ tools[team_2.ctool].image }")`,
+                                        "background-size"       : "80%",
+                                        "background-position"   : "center",
+                                        "background-repeat"     : "no-repeat"
+                                    });
                                     setTimeout(function()
                                     {
                                         $("#background .team2").fadeOut()
