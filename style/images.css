@@ -34,22 +34,22 @@
             left                    : 0px;
 
             /* background              : url("img/background_1.jpg"); */
-            background-size         : cover;
+            background-size         : contain;
             background-position     : center center;
             background-repeat       : no-repeat;
         }
 
         #background > .team2
         {
-            width                   : 100%;
+            width                   : 50%;
             height                  : 100%;
 
             position                : absolute;
             top                     : 0px;
-            left                    : 0px;
+            right                   : 0px;
 
             /* background              : url("img/background_1.jpg"); */
-            background-size         : cover;
+            background-size         : contain;
             background-position     : center center;
             background-repeat       : no-repeat;
         }
