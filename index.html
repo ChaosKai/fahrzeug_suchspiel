@@ -280,7 +280,19 @@
 
                         for (var i = 0; i < team_players.length; i++)
                         {
-                            $("#members").find(".list").append( $("<div></div>").text(team_players[i]) );
+                            $("#members").find(".list").append( $("<div></div>").text(team_players[i]).on("click", function()
+                            {
+                                if( team == 1 )
+                                {
+                                    team_1.players.splice(i, 1);
+                                    showMembers( 1 )
+                                }
+                                if( team == 2 )
+                                {
+                                    team_2.players.splice(i, 1);
+                                    showMembers( 2 )
+                                }
+                            }) );
                         }
                     }
 
