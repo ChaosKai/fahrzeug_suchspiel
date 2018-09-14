@@ -1,0 +1,174 @@
+[
+    {
+        "name" : "4 tlg. Steckleiter",
+        "image" : "s-tlg-steckleiter.jpg"
+    },
+    {
+        "name" : "Atemschutzmaske",
+        "image" : "atemschutzmaske.jpg"
+    },
+    {
+        "name" : "Atemschutzüberwachung",
+        "image" : "atemschutzueberwachung.jpg"
+    },
+    {
+        "name" : "Aufnahmebrücke",
+        "image" : "aufnahmebruecke.jpg"
+    },
+    {
+        "name" : "Blitzleuchte / Verkehrswarnleuchte",
+        "image" : "blitzleuchte.jpg"
+    },
+    {
+        "name" : "Steckleiter Verbindungsteil",
+        "image" : "bockleiterteil.jpg"
+    },
+    {
+        "name" : "Chemikalienschutzanzug",
+        "image" : "chemikalienschutzanzug.jpg"
+    },
+    {
+        "name" : "Mehrzweckstrahlrohr B",
+        "image" : "b-mehrzweckstrahlrohr.jpg"
+    },
+    {
+        "name" : "Mehrzweckstrahlrohr C",
+        "image" : "c-mehrzweckstrahlrohr.jpg"
+    },
+    {
+        "name" : "Druckbegrenzungsventil",
+        "image" : "druckbegrenzungsventil.jpg"
+    },
+    {
+        "name" : "Überdruckbelüfter",
+        "image" : "druckbelüfter.jpg"
+    },
+    {
+        "name" : "Feuerlöscher Pulver ABC",
+        "image" : "feuerloescher.jpg"
+    },
+    {
+        "name" : "Feuerpatsche",
+        "image" : "feuerpatsche.jpg"
+    },
+    {
+        "name" : "Feuerwehraxt",
+        "image" : "feuerwehraxt.jpg"
+    },
+    {
+        "name" : "DIN-Krankentrage",
+        "image" : "din-krankentrage.jpg"
+    },
+    {
+        "name" : "Feuerwehrleine",
+        "image" : "feuerwehrleine.jpg"
+    },
+    {
+        "name" : "Schuttmulde",
+        "image" : "schuttmulde.jpg"
+    },
+    {
+        "name" : "Feuerwehrschlauch-B 20m 75mm",
+        "image" : "feuerwehrschlauch-b.jpg"
+    },
+    {
+        "name" : "Feuerwehrschlauch-C 15m 42/52mm",
+        "image" : "feuerwehrschlauch-c.jpg"
+    },
+    {
+        "name" : "Halligan Tool",
+        "image" : "halligan-tool.jpg"
+    },
+    {
+        "name" : "Handfunkgerät 2m",
+        "image" : "handfunkgeraet.jpg"
+    },
+    {
+        "name" : "Handscheinwerfer / Handlampe",
+        "image" : "handscheinwerfer.jpg"
+    },
+    {
+        "name" : "Hohlstrahlrohr",
+        "image" : "hohlstrahlrohr.jpg"
+    },
+    {
+        "name" : "Kübelspritze",
+        "image" : "kuebelspritze.jpg"
+    },
+    {
+        "name" : "Kupplungsschlüssel",
+        "image" : "kupplungsschluessel.jpg"
+    },
+    {
+        "name" : "Mittelschaumrohr",
+        "image" : "mittelschaumrohr.jpg"
+    },
+    {
+        "name" : "Sammelstueck 3B mit Rückflussverhinderer",
+        "image" : "sammelstueck-3b.jpg"
+    },
+    {
+        "name" : "Saugkorb",
+        "image" : "saugkorb.jpg"
+    },
+    {
+        "name" : "Saugschlauch A (110mm | 1,6m)",
+        "image" : "saugschlauch-a.jpg"
+    },
+    {
+        "name" : "Scheinwerfer / Flutlichtstrahler",
+        "image" : "scheinwerfer.jpg"
+    },
+    {
+        "name" : "3 tlg. Schiebleiter",
+        "image" : "schiebleiter.png"
+    },
+    {
+        "name" : "Schlauchhalter",
+        "image" : "schlauchhalter.jpg"
+    },
+    {
+        "name" : "Schlauchtragekorb",
+        "image" : "schlauchtragekorb.jpg"
+    },
+    {
+        "name" : "Schwerschaumrohr",
+        "image" : "schwerschaumrohr.jpg"
+    },
+    {
+        "name" : "Standrohr 2B",
+        "image" : "standrohr.jpg"
+    },
+    {
+        "name" : "Stativ",
+        "image" : "stativ.png"
+    },
+    {
+        "name" : "Stützkrümmer",
+        "image" : "stuetzkruemmer.jpg"
+    },
+    {
+        "name" : "Überflurhydrantenschlüssel",
+        "image" : "ueberflurhydrantenschluessel.png"
+    },
+    {
+        "name" : "Unterflurhydrantenschlüssel",
+        "image" : "unterflurhydrantenschluessel.png"
+    },
+    {
+        "name" : "Verkehrsleitkegel",
+        "image" : "verkehrsleitkegel.jpg"
+    },
+    {
+        "name" : "Verteiler (B auf 1B,2C)",
+        "image" : "verteiler.jpg"
+    },
+    {
+        "name" : "Wärmebildkamera (WBK)",
+        "image" : "wbk.jpg"
+    },
+    {
+        "name" : "Zumischer Z4R (400l/min, Regelbar)",
+        "image" : "zumischer.jpg"
+    }
+]
