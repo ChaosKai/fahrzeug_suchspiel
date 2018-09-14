@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style/images.css">
+        <link rel="stylesheet" type="text/css" href="style/teams.css">
+        <link rel="stylesheet" type="text/css" href="style/members.css">
+    </head>
+    <body>
+
+
+        <div id="background">
+            <div class="main">
+
+            </div>
+            <div class="team1">
+
+            </div>
+            <div class="team2">
+
+            </div>
+        </div>
+
+        <div id="countdown">
+            00:00
+        </div>
+
+        <section id="team-1" class="team">
+            <span class="name">
+                Team 1
+            </span>
+            <span class="player">
+                Adrian
+            </span>
+        </section>
+        <section id="team-2" class="team">
+            <span class="name">
+                Team 2
+            </span>
+            <span class="player">
+                Chiara
+            </span>
+        </section>
+
+        <section id="members" data-team="none">
+            <a class="close">X</a>
+            <div class="list">
+
+            </div>
+            <div class="add">
+                <input type="text" placeholder="Name">
+                <a id="button-members-add">
+                    +
+                </a>
+            </div>
+        </section>
+
+        <section id="tools" data-team="none">
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+                <script type="text/javascript">
+
+                    var tools = [];
+
+                    $.getJSON( "script/tools.json", function( data ) {
+                        tools = data;
+
+                        for (var i = 0; i < tools.length; i++)
+                        {
+                            var tool_element = $(`<a></a>`).attr("data-tool", i).text(tools[i].name);
+
+                            tool_element.on("click", function()
+                            {
+                                if( $("#tools").attr("data-team") == 1 )
+                                {
+                                    team_1.ctool = $(this).attr("data-tool");
+                                    $("#background .team1").show().css("background", `url("img/${ tools[team_1.ctool].image }")`);
+                                    setTimeout(function()
+                                    {
+                                        $("#background .team1").fadeOut()
+                                    }, 2000);
+                                }
+                                if( $("#tools").attr("data-team") == 2 )
+                                {
+                                    team_2.ctool = $(this).attr("data-tool");
+                                    $("#background .team2").show().css("background", `url("img/${ tools[team_2.ctool].image }")`);
+                                    setTimeout(function()
+                                    {
+                                        $("#background .team2").fadeOut()
+                                    }, 2000);
+                                }
+
+                                $("#tools").fadeOut();
+                            })
+
+                            $("#tools").append( tool_element );
+                        }
+
+                        $("#tools").fadeOut();
+
+
+                    });
+
+                    $(document).ready(function()
+                    {
+                        $("#members").hide();
+
+                        $("#countdown").on("click", function()
+                        {
+                            if( countdown == 0 )
+                            {
+                                startRound();
+                            }
+                        });
+
+                        $("#team-1").find(".player").on("click", function()
+                        {
+                            team_1.cplayer++;
+
+                            if( team_1.cplayer > team_1.players.length - 1 )
+                            {
+                                team_1.cplayer = 0;
+                            }
+
+                            $(this).text(team_1.players[ team_1.cplayer ]);
+                            $("#tools").fadeIn();
+                            $("#tools").attr("data-team", "1");
+                        });
+
+                        $("#team-2").find(".player").on("click", function()
+                        {
+                            console.log("test");
+                            team_2.cplayer++;
+
+                            if( team_2.cplayer > team_2.players.length - 1 )
+                            {
+                                team_2.cplayer = 0;
+                            }
+
+                            $(this).text(team_2.players[ team_2.cplayer ]);
+                            $("#tools").fadeIn();
+                            $("#tools").attr("data-team", "2");
+                        });
+
+
+
+                        $("#team-1 .name").on("click", function()
+                        {
+                            $("#members").attr("data-team", 1).fadeIn();
+                            showMembers(1);
+                        });
+
+                        $("#team-2 .name").on("click", function()
+                        {
+                            $("#members").attr("data-team", 2).fadeIn();
+                            showMembers(2);
+                        });
+
+
+
+
+                        $("#members").find(".add").find("a").on("click", function()
+                        {
+                            if( $("#members").attr("data-team") == 1 ) {
+                                team_1.players.push( $("#members").find(".add").find("input").val() );
+                                team_1.cplayer = team_1.players.length - 1;
+                            }
+
+                            if( $("#members").attr("data-team") == 2 ) {
+                                team_2.players.push( $("#members").find(".add").find("input").val() );
+                                team_2.cplayer = team_2.players.length - 1;
+                            }
+
+                            showMembers( $("#members").attr("data-team") );
+                            $("#members").find(".add").find("input").val("");
+                        });
+
+                        $("#members").find(".close").on("click", function()
+                        {
+                            $("#members").fadeOut();
+                        });
+                    });
+
+
+
+
+                    var team_1 = {
+                        players : [],
+                        cplayer : 0,
+                        ctool   : 0,
+                        points  : 0
+                    }
+
+                    var team_2 = {
+                        players : [],
+                        cplayer : 0,
+                        ctool   : 0,
+                        points  : 0
+                    }
+
+                    var countdown = 0;
+
+
+                    function startRound()
+                    {
+                        countdown = 120;
+                        CountDown();
+
+                        $("#background .team1").fadeIn();
+                        $("#background .team2").fadeIn();
+                    }
+
+                    function CountDown()
+                    {
+                        if( countdown > 0 )
+                        {
+                            countdown--;
+
+                            $("#countdown").text(countdown + " sek");
+
+                            setTimeout(function()
+                            {
+                                CountDown();
+                            }, 1000);
+                        }
+                        else
+                        {
+                            $("#countdown").text("Neue Runde");
+                        }
+                    }
+
+                    function showMembers( team )
+                    {
+                        $("#members").fadeIn().attr("data-team", team);
+
+                        $("#members").find(".list").html("");
+
+                        if( team == 1 )
+                            var team_players = team_1.players;
+
+                        if( team == 2 )
+                            var team_players = team_2.players;
+
+                        for (var i = 0; i < team_players.length; i++)
+                        {
+                            $("#members").find(".list").append( $("<div></div>").text(team_players[i]) );
+                        }
+                    }
+
+
+
+                </script>
+
+
+    </body>
+</html>
